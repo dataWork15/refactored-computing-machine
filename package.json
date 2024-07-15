@@ -1,0 +1,37 @@
+{
+  "name": "farcasterframev4",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@coinbase/onchainkit": "^0.23.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "@tanstack/react-query": "^5.45.1",
+    "canvas": "^2.11.2",
+    "fetch": "^1.1.0",
+    "https-proxy-agent": "^7.0.4",
+    "next": "14.2.4",
+    "node-fetch": "^3.3.2",
+    "pango": "^0.0.3",
+    "path": "^0.12.7",
+    "puppeteer": "^22.12.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "safe-buffer": "^5.2.1",
+    "sharp": "^0.33.4",
+    "viem": "^2.16.2",
+    "wagmi": "^2.10.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
+}
