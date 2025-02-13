@@ -1,0 +1,27 @@
+name: refactored-computing-machine
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Pull latest changes with rebase
+        run: |
+          git pull https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/dataWork15/refactored-computing-machine.git main --rebase
+
+      - name: Generate commits
+        run: |
+          touch system.txt
+          for i in {30..31}; do
+            echo "Commit $i" >> system.txt
+            git config --global user.name "dataWork15"
+            git config --global user.email "hay.datives.0w@icloud.com"
+            git add .
+            git commit --date="$(date -d "-$i days")" -m "Update"
+          done
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/dataWork15/refactored-computing-machine.git main
